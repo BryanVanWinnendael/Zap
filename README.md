@@ -7,9 +7,6 @@
   <a href="https://github.com/BryanVanWinnendael/Zap/releases/latest">
       <img src="https://img.shields.io/github/v/release/BryanVanWinnendael/Zap" alt="version">
   </a>
-  <a href="">
-    <img src="https://img.shields.io/github/contributors/BryanVanWinnendael/Zap" alt="contributers">
-  </a>
 </div>
 
 With zap you can quickly search for a given file or folder.
