@@ -11,6 +11,10 @@
 
 With zap you can quickly search for a given file or folder.
 
+![Zap](/public/zap2.png)
+
+![Zap](/public/zap.png)
+
 ## Supported operating systems
 - Windows
 
