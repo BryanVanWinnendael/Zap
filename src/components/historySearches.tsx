@@ -34,7 +34,7 @@ const HistorySearches = () => {
               onClick={() => {
               handleChangeView(query, history[query])
               }} key={query} 
-              className={`group flex justify-between items-center p-1 border bg-white hover:border-opacity-5 hover:bg-opacity-5 ${query === selectedHistory ? "bg-opacity-5 border-opacity-5" : "border-opacity-0  bg-opacity-0"} text-white backdrop-filter backdrop-blur-lg border-white rounded-md cursor-pointer w-full max-w-full flex gap-5`}>
+              className={`group flex justify-between items-center p-1 border hover:border-opacity-5 hover:bg-opacity-5 hover:backdrop-filter hover:backdrop-blur-lg ${query === selectedHistory ? "bg-opacity-5 border-opacity-5 backdrop-filter backdrop-blur-lg" : "border-opacity-0  bg-opacity-0"} text-white border-white rounded-md cursor-pointer w-full max-w-full flex gap-5`}>
               <p className="text-white overflow-hidden whitespace-nowrap text-ellipsis">{query}</p>
               <div className="hidden group-hover:flex" onClick={(event) => event.stopPropagation()}>
                 <IoMdClose className="w-4 h-4" onClick={() => handleDelete(query)}/>

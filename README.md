@@ -19,3 +19,18 @@ This includes following features:
 - Stable [Rust](https://www.rust-lang.org/) Install
 - Bun installation (`npm install -g bun`)
 - Tauri-cli (`cargo install tauri-cli`)
+
+### Install dependencies
+```bash
+bun i
+```
+
+### Run app for development
+```bash
+cargo tauri dev
+```
+
+### Build for production
+```bash
+cargo tauri build
+```
