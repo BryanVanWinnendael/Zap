@@ -143,7 +143,7 @@ pub fn create_tree(
 
     // Counter to track progress update events
     let mut emit_counter = 0;
-    const EMIT_THRESHOLD: usize = 5000; // Adjust the threshold as needed
+    const EMIT_THRESHOLD: usize = 5000;
 
     // Recursively walk the directory and collect paths into a Vec
     let paths: Vec<PathBuf> = WalkDir::new(&mountpoint)
@@ -152,8 +152,7 @@ pub fn create_tree(
         .inspect(|entry| {
             if let Ok(metadata) = entry.metadata() {
                 let file_size = metadata.len(); // Get file size in bytes
-                                                // Calculate percentage with decimals
-                let percent = (pb_collect.position() as f64) / (used_bytes as f64) * 100.0;
+                let percent = (pb_collect.position() as f64) / (used_bytes as f64) * 100.0; // Calculate percentage with decimals
 
                 pb_collect.inc(file_size);
 
@@ -163,7 +162,7 @@ pub fn create_tree(
                     window
                         .emit("update_progress", (mountpoint.clone(), percent))
                         .expect("Failed to emit progress update event");
-                    emit_counter = 0; // Reset the counter
+                    emit_counter = 0;
                 }
             }
         })
@@ -180,7 +179,6 @@ pub fn create_tree(
             .expect("Failed to emit progress update event");
     }
 
-    // Use rayon to parallelize processing of paths
     let result: HashMap<PathBuf, Vec<PathBuf>> = paths
         .into_par_iter()
         .fold(

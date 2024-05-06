@@ -36,10 +36,7 @@ async fn search(query: String) -> String {
 
 #[tauri::command]
 async fn open(path: String) -> bool {
-    Command::new("explorer")
-        .arg(path) // <- Specify the directory you'd like to open.
-        .spawn()
-        .unwrap();
+    Command::new("explorer").arg(path).spawn().unwrap();
     true
 }
 
