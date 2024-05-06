@@ -20,11 +20,11 @@ With zap you can quickly search for a given file or folder.
 
 This includes following features:
   - load all disks and keep in cache
-  - search for file/folder in all disks
+  - search for a file/folder in all disks
   - quickly go (zap) to the location of the file/folder
   - keep the 10 recent zaps for a quick access
   - light/dark mode
-  - keep the searched files/folder to swtich between results
+  - keep the searched files/folder to switch between results
   
 ## Dev Setup/Installation
 ### Prerequisites
